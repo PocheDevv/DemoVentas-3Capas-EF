@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.2\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4ADEC61C-80D1-420E-A30A-5A3DB8AFA304}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyVentas_ADO</RootNamespace>
+    <AssemblyName>ProyVentas_ADO</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClienteADO.cs" />
+    <Compile Include="DashboardADO.cs" />
+    <Compile Include="FacturaADO.cs" />
+    <Compile Include="OrdenADO.cs" />
+    <Compile Include="ProductoADO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorADO.cs" />
+    <Compile Include="Tb_Abastecimiento.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Categoria.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Cliente.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Detalle_Compra.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Detalle_Factura.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Factura.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Orden_Compra.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Producto.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Proveedor.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_RepositorioDocumentos.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Ubigeo.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_UnidadMedida.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Usuario.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tb_Vendedor.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarFacturas_Paginacion_Result.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ListarProductosProveedor_Result.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_VentasPorAño_Result.cs">
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioADO.cs" />
+    <Compile Include="VentasLeon.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasLeon.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasLeon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasLeon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentasLeon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasLeon.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyVentas_BE\ProyVentas_BE.csproj">
+      <Project>{f0e9fdfb-53da-450a-9a97-e90e6f816cb2}</Project>
+      <Name>ProyVentas_BE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="VentasLeon.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VentasLeon.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="VentasLeon.edmx.diagram">
+      <DependentUpon>VentasLeon.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VentasLeon.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VentasLeon.edmx</DependentUpon>
+      <LastGenOutput>VentasLeon.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VentasLeon.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VentasLeon.edmx</DependentUpon>
+      <LastGenOutput>VentasLeon.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.2\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.2\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.2\build\EntityFramework.targets')" />
+</Project>

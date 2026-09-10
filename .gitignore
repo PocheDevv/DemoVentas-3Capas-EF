@@ -1,0 +1,55 @@
+# ---------------------------------------------------
+# .gitignore para proyecto Visual Studio / .NET Framework
+# ---------------------------------------------------
+
+# Carpetas de compilacion
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+build/
+bld/
+[Oo]ut/
+
+# Paquetes NuGet (se restauran solos con "Restaurar paquetes NuGet")
+packages/
+*.nupkg
+*.snupkg
+!**/packages/build/
+
+# Archivos de usuario y configuracion local de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Resultados de pruebas y logs
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.log
+
+# Archivos temporales / de sistema
+*.tmp
+*.cache
+*.bak
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ReSharper / Rider
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Publicacion
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+PublishScripts/

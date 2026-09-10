@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ProyVentas_ADO/ProyVentas_ADO.csproj" Id="4adec61c-80d1-420e-a30a-5a3db8afa304" />
+  <Project Path="ProyVentas_BE/ProyVentas_BE.csproj" Id="f0e9fdfb-53da-450a-9a97-e90e6f816cb2" />
+  <Project Path="ProyVentas_BL/ProyVentas_BL.csproj" Id="a2b35584-daff-4476-a9ad-8568a7f874ee" />
+  <Project Path="SitioWEB_VentasGUI/SitioWEB_VentasGUI.csproj" Id="3b6773b8-f722-4742-9fc5-21c87e67c6a8" />
+</Solution>
