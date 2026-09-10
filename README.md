@@ -86,7 +86,7 @@ Sus tablas principales: `Tb_Cliente`, `Tb_Producto`, `Tb_Proveedor`, `Tb_Factura
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/PocheDevv/DemoVentas_3capasEF.git
+      git clone https://github.com/PocheDevv/DemoVentas-3Capas-EF.git
    ```
 2. Abre `DemoVentas_3CapasEF.slnx` en **Visual Studio 2022**.
 3. Restaura los paquetes NuGet (clic derecho en la solución → *Restaurar paquetes NuGet*).
