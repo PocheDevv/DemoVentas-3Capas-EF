@@ -28,7 +28,7 @@ El proyecto separa las responsabilidades en cuatro proyectos dentro de una misma
    ProyVentas_BE (Entidades)  →  usado por todas las capas
 ```
 
-| Proyecto | Rol | Contenido | asdfasdf
+| Proyecto | Rol | Contenido |
 |---|---|---|
 | **ProyVentas_BE** | Business Entities | Clases POCO: `ClienteBE`, `ProductoBE`, `FacturaBE`, `OrdenBE`, `UsuarioBE`, `DashboardBE` |
 | **ProyVentas_ADO** | Acceso a datos | Modelo Entity Framework `VentasLeon.edmx` (database-first) y clases `*ADO` |
